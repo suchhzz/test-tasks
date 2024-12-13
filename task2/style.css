@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    row-gap: 30px;
+    column-gap: 20px;
+}
+
+
+.container .grid-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border: 5px solid darkgray;
+    box-sizing: border-box;
+}
