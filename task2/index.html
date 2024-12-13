@@ -11,46 +11,101 @@
 
     <section>
 
+        <div class="modal-semitransparent-background d-flex">
+            <div class="modal d-flex">
+                <div class="modal-body d-flex">
+                    <img class="modal-image">
+                    <div class="cross">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-counter">
+            <button id="countImagesButton">Count images</button>
+            <div class="image-counter-container d-flex">
+                <div class="count d-flex">
+                    <p>Images:</p>
+                    <p id="imageCounterCountSection"></p>
+                </div>
+                <div class="date d-flex">
+                    <p>Date:</p>
+                    <p id="imageCounterDateSection"></p>
+                </div>
+            </div>
+        </div>
+
         <div class="container d-grid">
-            <div class="grid-item">
-                <img src="./images/1.jpg">
+            <div class="grid-item d-flex" data-id="1">
+                <img class="image-item" src="./images/1.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="./images/2.jpg">
+            <div class="grid-item" data-id="2">
+                <img class="image-item" src="./images/2.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="./images/3.jpg">
+            <div class="grid-item" data-id="3">
+                <img class="image-item" src="./images/3.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="./images/4.jpg">
+            <div class="grid-item" data-id="4">
+                <img class="image-item" src="./images/4.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="./images/5.jpg">
+            <div class="grid-item" data-id="5">
+                <img class="image-item" src="./images/5.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="./images/6.jpg">
+            <div class="grid-item" data-id="6">
+                <img class="image-item" src="./images/6.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="./images/7.jpg">
+            <div class="grid-item" data-id="7">
+                <img class="image-item" src="./images/7.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="./images/8.jpg">
+            <div class="grid-item" data-id="8">
+                <img class="image-item" src="./images/8.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="./images/9.jpg">
+            <div class="grid-item" data-id="9">
+                <img class="image-item" src="./images/9.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="./images/10.jpg">
+            <div class="grid-item" data-id="10">
+                <img class="image-item" src="./images/10.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="./images/11.jpg">
+            <div class="grid-item" data-id="11">
+                <img class="image-item" src="./images/11.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
-            <div class="grid-item">
-                <img src="./images/12.jpg">
+            <div class="grid-item" data-id="12">
+                <img class="image-item" src="./images/12.jpg">
+                <div class="cross image-cross">
+                </div>
             </div>
+        </div>
+
+        <div class="button-container d-flex">
+            <button id="restoreButton">Restore</button>
         </div>
 
     </section>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
