@@ -4,6 +4,7 @@
 }
 
 section {
+    height: 100vh;
     background-color: #f5f5f5;
 }
 
@@ -13,9 +14,15 @@ section {
     align-items: center;
 }
 
+.relative-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
 .container {
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
 }
 
 .container .flag-item {
@@ -56,3 +63,63 @@ section {
     transform: translate(-50%, -50%);
 }
 
+.container .iceland {
+    height: 216px;
+}
+
+.container .iceland .iceland-background {
+    background-color: #003897;
+    position: relative;
+}
+
+.iceland .iceland-background .iceland-vertical-white-line {
+    position: absolute;
+    background-color: #ffffff;
+    max-width: 34px;
+    left: 30%;
+    top: 0;
+}
+
+.iceland .iceland-background .iceland-horizontal-white-line {
+    position: absolute;
+    background-color: #ffffff;
+    max-height: 34px;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.iceland .iceland-background .iceland-horizontal-white-line .relative-container .iceland-horizontal-red-line {
+    position: absolute;
+    background-color: #D72828;
+    max-height: 14px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.iceland .iceland-background .iceland-vertical-white-line .relative-container .iceland-vertical-red-line {
+    position: absolute;
+    background-color: #D72828;
+    max-width: 14px;
+    left: 30%;
+    top: 0;
+}
+
+.czech .czech-background {
+    background-color: #11457e;
+    position: relative;
+}
+
+.czech .czech-background .czech-upper-color {
+    position: absolute;
+    clip-path: polygon(0 0, 101% 0%, 101% 50%, 50% 50%);
+    background-color: #ffffff;
+}
+
+.czech .czech-background .czech-lower-color {
+    position: absolute;
+    clip-path: polygon(0 100%, 101% 100%, 101% 50%, 50% 50%);
+    background-color: #d7141a;
+}
