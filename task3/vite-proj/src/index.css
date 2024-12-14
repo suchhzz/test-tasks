@@ -9,6 +9,12 @@
   align-items: center;
 }
 
+.counter-field {
+  position: fixed;
+  top: 10%;
+  left: 50px;
+}
+
 .container {
   width: 50%;
   margin: 100px auto;

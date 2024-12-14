@@ -1,14 +1,12 @@
 import axios from "axios"
 
-export const fetchUniversities = async () => {
+export const fetchUniversities = async (country) => {
 
     try {
-        var response = await axios.get('http://universities.hipolabs.com/search?country=ukraine');
+        const response = await axios.get(`http://universities.hipolabs.com/search?country=${country}`);
 
-    }   catch (e) {
-        console.error('universities fetch error');
-        console.error(e);
-    }
-
-    console.log(response);
+        return response.data;
+      } catch (error) {
+        console.error('Error fetching universities:', error);
+      }
 };

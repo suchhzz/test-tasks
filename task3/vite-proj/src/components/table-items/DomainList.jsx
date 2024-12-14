@@ -1,8 +1,9 @@
-export default function DomainList() {
+export default function DomainList( {domains} ) {
     return (
         <>
-            <p>domain1</p>
-            <p>domain2</p>
+            {domains.map((domain, index) => (
+                <p key={index}>{domain}</p>
+            ))}
         </>
     )
 }

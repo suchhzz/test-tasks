@@ -7,22 +7,44 @@ import { fetchUniversities } from './services/universities'
 function App() {
 
   const [univesityData, setUniversityData] = useState([]);
+  const [countrySearch, setCountrySearch] = useState("");
 
   useEffect(() => {
-    const fetchData = async () => {
-      let data = await fetchUniversities();
-
-      setUniversityData(data);
+    const savedCountry = localStorage.getItem('countrySearch');
+    if (savedCountry) {
+      setCountrySearch(savedCountry);
     }
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async (country) => {
+      try {
+        if (country.trim() !== "") {
+          const fetchedData = await fetchUniversities(country);
+          setUniversityData(fetchedData);
+        } else {
+          setUniversityData([]);
+        }
+      } catch (error) {
+        console.error('fetching data error');
+        console.error(error);
+      }
+    }
+    fetchData(countrySearch);
+
+  }, [countrySearch]);
+
 
   return (
     <>
       <section>
         <div className="container">
-          <Search></Search>
+          <Search 
+            setCountrySearch={setCountrySearch}
+            />
           <Table 
-            data={univesityData}/>
+            data={univesityData} 
+            />
         </div>
       </section>
     </>
