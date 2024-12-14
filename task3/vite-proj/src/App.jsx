@@ -1,23 +1,30 @@
+import { useEffect, useState } from 'react'
 import './App.css'
+import Search from './components/Search'
+import Table from './components/Table'
+import { fetchUniversities } from './services/universities'
 
 function App() {
 
+  const [univesityData, setUniversityData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      let data = await fetchUniversities();
+
+      setUniversityData(data);
+    }
+  }, [])
+
   return (
     <>
-      <div class="container">
-
-        <div class="search-section d-flex">
-          <form class="search-form d-flex">
-            <input type="text" placeholder="Country"/>
-            <input type="submit" value="Send"/>
-          </form>
-          <button>Reset</button>
+      <section>
+        <div className="container">
+          <Search></Search>
+          <Table 
+            data={univesityData}/>
         </div>
-
-        <div class="table-section">
-    
-        </div>
-      </div>
+      </section>
     </>
   )
 }

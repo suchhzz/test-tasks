@@ -2,3 +2,37 @@
   margin: 0;
   padding: 0;
 }
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.container .search-section {
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+table td.table-multi-items a, p {
+  display: block;
+}
